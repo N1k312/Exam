@@ -16,8 +16,11 @@ jobs:
       - name: Установить зависимости
         run: pip install -r requirements.txt
 
-      - name: Запустить анализ на демо-данных
+      - name: Session 1 — анализ данных (демо)
         run: python solution.py --demo
+
+      - name: Session 2 — проектирование
+        run: python solution_session2.py
 
       - name: Сохранить результаты как артефакт
         uses: actions/upload-artifact@v4
