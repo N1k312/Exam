@@ -1,29 +1,6 @@
-name: test-macos
-on: [push, workflow_dispatch]
 
-jobs:
-  run:
-    runs-on: macos-latest
-    steps:
-      - name: Получить код из репозитория
-        uses: actions/checkout@v4
-
-      - name: Установить Python 3.9
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.9"
-
-      - name: Установить зависимости
-        run: pip install -r requirements.txt
-
-      - name: Session 1 - анализ данных (демо)
-        run: python solution.py --demo
-
-      - name: Session 2 - проектирование
-        run: python solution_session2.py
-
-      - name: Сохранить результаты как артефакт
-        uses: actions/upload-artifact@v4
-        with:
-          name: output-files
-          path: output/
+pandas>=1.3,<2.3
+numpy>=1.21,<2.1
+matplotlib>=3.4,<3.9
+statsmodels>=0.13,<0.15
+scikit-learn>=1.0,<1.5
