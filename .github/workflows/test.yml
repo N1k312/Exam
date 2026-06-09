@@ -20,7 +20,7 @@ jobs:
         run: python solution.py --demo
 
       - name: Session 2 — проектирование
-        run: python solution_session2.py
+        run: python solution2.py
 
       - name: Сохранить результаты как артефакт
         uses: actions/upload-artifact@v4
