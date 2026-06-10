@@ -69,7 +69,7 @@ def line(ax, x1, y1, x2, y2, style="-", color="#555555", arrow=False):
         ax.plot([x1, x2], [y1, y2], linestyle=style, color=color, lw=1.2)
 
 
-# 2.1  USE CASE DIAGRAM  -> Session2_UseCaseDiagram.pdf
+# 2.1 Session2_UseCaseDiagram.pdf
 
 def task_2_1_use_case(out_dir):
     print("[2.1] Use Case Diagram ...")
