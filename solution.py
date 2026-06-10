@@ -190,14 +190,14 @@ def task_1_1_exploration(sales, products, customers, out_dir):
                 ("products.csv", products),
                 ("customers.csv", customers)]
 
-    w("=" * 70)
+    
     w("SESSION 1 — DATA EXPLORATION (Изучение данных)")
-    w("=" * 70)
+    
 
     for fname, df in datasets:
-        w("\n" + "-" * 70)
+        
         w("ФАЙЛ: {}   (строк: {}, столбцов: {})".format(fname, len(df), df.shape[1]))
-        w("-" * 70)
+       
 
         w("\nПервые 5 строк:")
         w(df.head().to_string())
@@ -513,9 +513,9 @@ def task_1_5_customer_analysis(customers, out_dir):
     log("    -> " + path)
 
 
-# =============================================================================
-# 1.6  ПРОГНОЗ ВРЕМЕННЫХ РЯДОВ (ARIMA)  ->  Session1_SalesForecast.csv
-# =============================================================================
+
+# 1.6 Session1_SalesForecast.csv
+
 def task_1_6_forecast(sales, products, out_dir):
     log("[1.6] Прогноз ARIMA (30 дней) ...")
     from statsmodels.tsa.arima.model import ARIMA
@@ -849,10 +849,10 @@ def main():
         input_dir = os.path.join(out_dir, "_demo_data")
         generate_demo_data(input_dir)
 
-    log("\n" + "=" * 70)
+    
     log("BELLE CROISSANT LYONNAIS — SESSION 1 (АНАЛИЗ ДАННЫХ)")
     log("Вход: {}   Выход: {}".format(os.path.abspath(input_dir), os.path.abspath(out_dir)))
-    log("=" * 70)
+    
 
     sales, products, customers = load_data(input_dir)
 
@@ -893,9 +893,9 @@ def main():
     # 1.10 отток
     task_1_10_churn(sales_c, products, customers_c, out_dir, cltv=cltv)
 
-    log("\n" + "=" * 70)
+    
     log("ГОТОВО. Все файлы-результаты — в папке: {}".format(os.path.abspath(out_dir)))
-    log("=" * 70)
+    
 
 
 if __name__ == "__main__":
